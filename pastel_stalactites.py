@@ -67,7 +67,7 @@ class App:
         if (self.game_state == 'title'):
             pyxel.text(93, pyxel.height//2 - 8, 'PASTEL STALACTITES', self.rotating_font_color)
             pyxel.text(118, pyxel.height//2, self.version, self.rotating_font_color)
-            pyxel.text(94, pyxel.height//2 + 8, 'by Matthew Niznik', 11)
+            pyxel.text(100, pyxel.height//2 + 8, 'by Matt Niznik', 11)
             pyxel.text(85, pyxel.height//2 + 24, '(press SPACE to start)', 7)
         elif (self.game_state == 'gameover'):
             pyxel.text(self.game_over_message['x'], pyxel.height//2 - 8, self.game_over_message['msg'], self.rotating_font_color)
