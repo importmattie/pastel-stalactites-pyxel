@@ -3,9 +3,11 @@ import pyxel
 
 class App:
     def __init__(self):
-        self.version = 'v1.0.0'
+        self.version = 'v1.1.0'
 
         pyxel.init(256, 180, fps=60, caption="Pastel Stalactites (" + self.version + ") by Matt Niznik")
+
+        pyxel.load("just_barely.pyxres")
 
         self.score = 0
         self.distance = 0
@@ -97,6 +99,10 @@ class App:
             })
         self.hero_height = self.hero_starting_height
         self.score = 0
+        self.distance = 0
+        self.ppd = 0
+
+        pyxel.playm(0, loop=True)
 
     def update_stal(self):
         # stals
@@ -124,6 +130,7 @@ class App:
             self.update_score()
         else:
             self.game_state = 'gameover'
+            pyxel.stop()
             self.update_game_over_message()
 
     def update_score(self):
