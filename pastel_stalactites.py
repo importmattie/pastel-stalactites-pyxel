@@ -5,7 +5,7 @@ class App:
     def __init__(self):
         self.version = 'v1.1.0'
 
-        pyxel.init(256, 180, fps=60, caption="Pastel Stalactites (" + self.version + ") by Matt Niznik")
+        pyxel.init(256, 180, fps=60, title="Pastel Stalactites (" + self.version + ") by Mattie Niznik")
 
         pyxel.load("just_barely.pyxres")
 
@@ -69,7 +69,7 @@ class App:
         if (self.game_state == 'title'):
             pyxel.text(93, pyxel.height//2 - 8, 'PASTEL STALACTITES', self.rotating_font_color)
             pyxel.text(118, pyxel.height//2, self.version, self.rotating_font_color)
-            pyxel.text(100, pyxel.height//2 + 8, 'by Matt Niznik', 11)
+            pyxel.text(100, pyxel.height//2 + 8, 'by Mattie Niznik', 11)
             pyxel.text(85, pyxel.height//2 + 24, '(press SPACE to start)', 7)
         elif (self.game_state == 'gameover'):
             pyxel.text(self.game_over_message['x'], pyxel.height//2 - 8, self.game_over_message['msg'], self.rotating_font_color)
